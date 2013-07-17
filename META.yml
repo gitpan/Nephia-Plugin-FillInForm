@@ -27,16 +27,15 @@ no_index:
 provides:
   Nephia::Plugin::FillInForm:
     file: lib/Nephia/Plugin/FillInForm.pm
-    version: 0.03
+    version: 0.04
 requires:
   HTML::FillInForm: 0
-  Nephia: 0.23
-  Nephia::DSLModifier: 0
+  Nephia: 0.34
   perl: 5.008005
 resources:
   bugtracker: https://github.com/ytnobody/Nephia-Plugin-FillInForm/issues
   homepage: https://github.com/ytnobody/Nephia-Plugin-FillInForm
   repository: git://github.com/ytnobody/Nephia-Plugin-FillInForm.git
-version: 0.03
+version: 0.04
 x_contributors:
   - 'Syohei YOSHIDA <syohex@gmail.com>'

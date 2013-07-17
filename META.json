@@ -41,8 +41,7 @@
       "runtime" : {
          "requires" : {
             "HTML::FillInForm" : "0",
-            "Nephia" : "0.23",
-            "Nephia::DSLModifier" : "0",
+            "Nephia" : "0.34",
             "perl" : "5.008005"
          }
       },
@@ -55,7 +54,7 @@
    "provides" : {
       "Nephia::Plugin::FillInForm" : {
          "file" : "lib/Nephia/Plugin/FillInForm.pm",
-         "version" : "0.03"
+         "version" : "0.04"
       }
    },
    "release_status" : "stable",
@@ -69,7 +68,7 @@
          "web" : "https://github.com/ytnobody/Nephia-Plugin-FillInForm"
       }
    },
-   "version" : "0.03",
+   "version" : "0.04",
    "x_contributors" : [
       "Syohei YOSHIDA <syohex@gmail.com>"
    ]
