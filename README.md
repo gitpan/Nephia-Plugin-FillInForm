@@ -1,29 +1,30 @@
 # NAME
 
-Nephia::Plugin::FillInForm - Nephia plugin that provides automated fill-in-form feature
+Nephia::Plugin::FillInForm - A plugin for Nephia that provides fill-in-form feature
 
 # SYNOPSIS
 
-    use Nephia plugin => ['FillInForm'];
+    use Nephia plugins => [
+        'FillInForm',
+        'View::MicroTemplate' => { ... },
+    ];
     path '/' => sub {
-        +{
-            template => 'form.html',
-        };
-    };
-    
-
-    # To suppress fillin, use "suppress_fillin DSL"
-    path '/no_fillin' => sub {
-        suppress_fillin +{
-            template => 'no_fillin_form.html',
-        };
+        my $params = param;
+        fillin_form( $params ); # fill params in form
+        render('template.html');
     };
 
-# COMMAND
+# DESCRIPTION
 
-## suppress\_fillin
+Nephia::Plugin::FillInForm provides fill-in-form feature.
 
-Suppress fill-in-form feature when rendering.
+# DSL
+
+## fillin\_form
+
+    fillin_form( $hashref );
+
+Fill spedified value in form.
 
 # LICENSE
 

@@ -1,10 +1,10 @@
 {
-   "abstract" : "Nephia plugin that provides automated fill-in-form feature",
+   "abstract" : "A plugin for Nephia that provides fill-in-form feature",
    "author" : [
       "ytnobody <ytnobody@gmail.com>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Minilla/v0.5.5",
+   "generated_by" : "Minilla/v0.6.5",
    "license" : "perl_5",
    "meta-spec" : {
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
@@ -41,7 +41,7 @@
       "runtime" : {
          "requires" : {
             "HTML::FillInForm" : "0",
-            "Nephia" : "0.34",
+            "Nephia" : "0.80",
             "perl" : "5.008005"
          }
       },
@@ -54,22 +54,19 @@
    "provides" : {
       "Nephia::Plugin::FillInForm" : {
          "file" : "lib/Nephia/Plugin/FillInForm.pm",
-         "version" : "0.04"
+         "version" : "0.20"
       }
    },
    "release_status" : "stable",
    "resources" : {
       "bugtracker" : {
-         "web" : "https://github.com/ytnobody/Nephia-Plugin-FillInForm/issues"
+         "web" : "https://github.com/nephia/Nephia-Plugin-FillInForm/issues"
       },
-      "homepage" : "https://github.com/ytnobody/Nephia-Plugin-FillInForm",
+      "homepage" : "https://github.com/nephia/Nephia-Plugin-FillInForm",
       "repository" : {
-         "url" : "git://github.com/ytnobody/Nephia-Plugin-FillInForm.git",
-         "web" : "https://github.com/ytnobody/Nephia-Plugin-FillInForm"
+         "url" : "git://github.com/nephia/Nephia-Plugin-FillInForm",
+         "web" : "https://github.com/nephia/Nephia-Plugin-FillInForm"
       }
    },
-   "version" : "0.04",
-   "x_contributors" : [
-      "Syohei YOSHIDA <syohex@gmail.com>"
-   ]
+   "version" : "0.20"
 }

@@ -2,14 +2,20 @@ use strict;
 use warnings;
 use Test::More;
 use Plack::Test;
-use Plack::Util;
-use File::Spec;
-use File::Basename 'dirname';
 use HTTP::Request::Common;
 use URI;
+use Nephia::Core;
 
-my $psgi = File::Spec->catfile(dirname(__FILE__), 'test.psgi');
-my $app = Plack::Util::load_psgi($psgi);
+my $v = Nephia::Core->new(
+    plugins => ['FillInForm'],
+    app => sub {
+        my $path   = req()->path;
+        my $params = param()->as_hashref;
+        fillin_form($params) unless $path =~ /suppress/;
+        [200, [], '<html><body><form id="foo"><input name="name"><input name="message"></form></body></html>'];
+    },
+);
+my $app = $v->run;
 
 test_psgi $app, sub {
     my $cb = shift;
